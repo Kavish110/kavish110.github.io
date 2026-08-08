@@ -1,0 +1,28 @@
+title: Kavish Patel
+description: >-
+  Data Scientist & AI/ML Engineer building agentic systems, streaming data
+  pipelines, and ML infrastructure.
+url: "https://kavish110.github.io"
+baseurl: ""
+
+author:
+  name: Kavish Patel
+  email: kavishpatel1102@gmail.com
+  github: kavish110
+  linkedin: kavish1102
+
+markdown: kramdown
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

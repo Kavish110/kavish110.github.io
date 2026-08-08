@@ -1,0 +1,198 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <p class="eyebrow">Hi, I&rsquo;m</p>
+  <h1>Kavish Patel</h1>
+  <p class="lead">
+    Data Scientist &amp; AI/ML Engineer building agentic systems, streaming data
+    pipelines, and ML infrastructure. Currently pursuing an MS in Data Science,
+    Analytics &amp; Engineering at Arizona State University.
+  </p>
+  <div class="button-row">
+    <a class="btn btn-primary" href="#projects">View Projects</a>
+    <a class="btn btn-secondary" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank" rel="noopener">Download Resume</a>
+    <a class="btn btn-secondary" href="#contact">Contact</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    I work at the intersection of data infrastructure and applied machine
+    learning &mdash; from Kubernetes-orchestrated streaming pipelines to
+    multi-agent LLM systems that write and debug hardware code. I&rsquo;m
+    interested in agentic AI workflows, retrieval-augmented generation, and
+    the distributed systems that make ML products reliable at scale.
+  </p>
+  <p>
+    Previously, I worked as a Product Engineer at Exxat and a Data Analyst at
+    Accelleron, shipping ML-backed tools and dashboards used across
+    large-scale operations.
+  </p>
+</section>
+
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Infrastructure &amp; Orchestration</h3>
+      <div class="chip-row">
+        <span class="chip">Docker</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">Apache Kafka</span>
+        <span class="chip">Apache Spark</span>
+        <span class="chip">Airflow</span>
+        <span class="chip">AWS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>AI &amp; ML Systems</h3>
+      <div class="chip-row">
+        <span class="chip">PyTorch</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">LangChain</span>
+        <span class="chip">LLMs</span>
+        <span class="chip">RAG</span>
+        <span class="chip">Agentic AI Workflows</span>
+        <span class="chip">Vector Search (pgvector)</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Data &amp; Distributed Processing</h3>
+      <div class="chip-row">
+        <span class="chip">Streaming Pipelines</span>
+        <span class="chip">A/B Testing</span>
+        <span class="chip">Causal Inference</span>
+        <span class="chip">Recommender Systems</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Languages &amp; APIs</h3>
+      <div class="chip-row">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">R</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">REST</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="card">
+      <h3>Containerized Real-Time Graph Analytics Pipeline</h3>
+      <ul>
+        <li>Orchestrated a production-style Docker and Kubernetes cluster on Minikube integrating Kafka, Zookeeper, and Neo4j, standing up a multi-service ingestion and processing system with independently scaled components.</li>
+        <li>Implemented PageRank and BFS graph algorithms over streaming NYC Yellow Cab data, tuning throughput and resource allocation across the cluster for near real-time ranking and traversal.</li>
+      </ul>
+      <div class="chip-row">
+        <span class="chip">Docker</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">Kafka</span>
+        <span class="chip">Neo4j</span>
+        <span class="chip">Streaming</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous EDA Agent</h3>
+      <ul>
+        <li>Built a multi-agent system with LangGraph (Planner, RTL Generator, Compiler, Simulation, Debugger, Optimizer, Reporter) that converts natural language hardware specs into synthesizable Verilog and iterates autonomously until validation passes.</li>
+        <li>Integrated open-source EDA tooling &mdash; Verilator, Icarus Verilog, Yosys, and OpenROAD &mdash; for linting, simulation, gate-level synthesis, and static timing analysis.</li>
+        <li>Implemented a primary/backup local model escalation strategy (Qwen2.5 Coder 14B escalating to Gemma 3 12B or DeepSeek Coder) so the agent automatically repairs compilation and logic errors.</li>
+        <li>Shipped a Dockerized FastAPI backend and Streamlit dashboard for workflow visualization and report generation.</li>
+      </ul>
+      <div class="chip-row">
+        <span class="chip">LangGraph</span>
+        <span class="chip">LLMs</span>
+        <span class="chip">Agentic AI</span>
+        <span class="chip">Verilog</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">Docker</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>CLIP-Guided Diffusion Model on Tiny ImageNet</h3>
+      <ul>
+        <li>Trained a latent diffusion model steered by CLIP ViT-B/32 to generate semantically aligned 64&times;64 images, running the full training lifecycle: data preparation, GPU training, evaluation, and optimization.</li>
+        <li>Reduced inference time by 30% through UNet architecture tuning and optimized sampling steps, balancing compute cost against image fidelity.</li>
+      </ul>
+      <div class="chip-row">
+        <span class="chip">PyTorch</span>
+        <span class="chip">Diffusion Models</span>
+        <span class="chip">CLIP</span>
+        <span class="chip">Computer Vision</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <h2>Experience</h2>
+
+  <div class="timeline-item">
+    <div class="timeline-head">
+      <h3>Exxat Inc.</h3>
+      <span class="dates">Jan 2024 &ndash; Jun 2024</span>
+    </div>
+    <p class="role">Product Engineer &mdash; Client Implementation &middot; Remote, NJ, USA</p>
+    <ul>
+      <li>Containerized and deployed an NLP classification model with Docker for production use, sizing the deployment to handle real-time query traffic over 10 million records.</li>
+      <li>Built automated ML inference pipelines that cut report generation time by 15%, adding monitoring and feedback loops to keep pipeline output and reliability measurable over time.</li>
+      <li>Built a Python and Selenium automation system that lifted operational efficiency by 20%, integrating it into cross-functional data infrastructure.</li>
+      <li>Designed 12 HIPAA and FERPA compliant Power BI dashboards giving academic administrators visibility into student outcomes and compliance metrics.</li>
+    </ul>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-head">
+      <h3>Accelleron</h3>
+      <span class="dates">Apr 2023 &ndash; Oct 2023</span>
+    </div>
+    <p class="role">Data Analyst &mdash; Operations &middot; Remote, Switzerland</p>
+    <ul>
+      <li>Applied statistical modeling and causal analysis across three years of financial data, surfacing performance trends that informed strategic decisions for 33 regional markets.</li>
+      <li>Automated creation and distribution of performance reports for 33 regions in Python, improving data accessibility and enabling real-time updates for stakeholders across sales teams.</li>
+      <li>Partnered with regional sales managers to define conversion metrics, building dashboards that surfaced actionable signals from the underlying data pipeline.</li>
+      <li>Optimized reporting pipelines to reduce manual intervention and preserve data accuracy through a full migration from Tableau to Power BI.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <h2>Education</h2>
+
+  <div class="timeline-item">
+    <div class="timeline-head">
+      <h3>Arizona State University</h3>
+      <span class="dates">Aug 2024 &ndash; May 2026</span>
+    </div>
+    <p class="role">Master of Science in Data Science, Analytics and Engineering &middot; GPA 3.7</p>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-head">
+      <h3>Charutar Vidya Mandal University, India</h3>
+      <span class="dates">2020 &ndash; 2024</span>
+    </div>
+    <p class="role">Bachelor of Engineering in Electronics and Communication, Minor in Data Science &middot; GPA 9.16/10</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p class="muted">Feel free to reach out &mdash; I&rsquo;m always happy to chat about data systems, ML infrastructure, or agentic AI.</p>
+  <div class="contact-links">
+    <a class="btn btn-primary" href="mailto:{{ site.author.email }}">Email Me</a>
+    <a class="btn btn-secondary" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn btn-secondary" href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
